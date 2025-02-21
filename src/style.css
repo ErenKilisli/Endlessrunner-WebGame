@@ -1,0 +1,27 @@
+@keyframes sliderright {
+    from {
+    background-position: 70000%;
+    }
+    to {
+    background-position: 0%;
+    }
+}
+    
+#background {
+    position: absolute;
+    background-image: url("../img/background-image.jpg");
+    height: 300px;
+    width: 100%;
+    animation: sliderright 600s infinite linear;
+}
+    
+
+#car {
+    background-image: url("../img/cartest.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 130px;
+    width: 130px;
+    position: absolute;
+    bottom: 0;
+}
