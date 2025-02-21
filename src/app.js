@@ -1,9 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
 const car = document.querySelector('#car');
-let position = 0; // Vertical position of the car
-    
-    
-    Collapse
+let position = 0;
+let gravity = 0.7;
+
     function control(e) {
         if (e.code === 'Space') {
             jump();
@@ -11,13 +10,11 @@ let position = 0; // Vertical position of the car
     }
     
     function jump() {
-        // Move up
         let upInterval = setInterval(() => {
             if (position >= 150) {
-                // Once the car reaches max height, stop rising
+
                 clearInterval(upInterval);
     
-                // Move down
                 let downInterval = setInterval(() => {
                     if (position <= 0) {
                         clearInterval(downInterval);
